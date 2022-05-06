@@ -1,0 +1,30 @@
+<script type="text/javascript">
+require(['jquery', 'jquery/ui'], function($){
+    jQuery("#password").before('<span toggle="#password" class="toggle-password"><img src="<?= $this->getViewFileUrl("Navigate_PasswordHideShow::images/eye.png"); ?>" class="eye-open" /><img src="<?= $this->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png"); ?>" class="eye-close" style="display: none;"/></span>');
+    jQuery("#password-confirmation").before('<span toggle="#password-confirmation" class="toggle-password-confirmation"><img src="<?= $this->getViewFileUrl("Navigate_PasswordHideShow::images/eye.png"); ?>" class="eye-open-confirmation" /><img src="<?= $this->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png"); ?>" class="eye-close-confirmation" style="display: none;"/></span>');
+    jQuery("body").on('click', '.toggle-password', function() {
+        var input = jQuery("#password");
+        if (input.attr("type") === "password") {
+            input.attr("type", "text");
+            jQuery(".eye-close").show();
+            jQuery(".eye-open").hide();
+        } else {
+            jQuery(".eye-close").hide();
+            jQuery(".eye-open").show();
+            input.attr("type", "password");
+        }
+    });
+    jQuery("body").on('click', '.toggle-password-confirmation', function() {
+        var input = jQuery("#password-confirmation");
+        if (input.attr("type") === "password") {
+            input.attr("type", "text");
+            jQuery(".eye-close-confirmation").show();
+            jQuery(".eye-open-confirmation").hide();
+        } else {
+            jQuery(".eye-close-confirmation").hide();
+            jQuery(".eye-open-confirmation").show();
+            input.attr("type", "password");
+        }
+    });
+});
+</script>

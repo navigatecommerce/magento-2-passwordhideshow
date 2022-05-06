@@ -1,0 +1,16 @@
+.field.password .control, .field.confirmation .control{position:relative;}
+.toggle-password img, .toggle-password-confirmation img{ height:24px;}
+.toggle-password, .toggle-password-confirmation {
+    position: absolute;
+    height: 32px;
+    right: 0;
+    z-index: 3;
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

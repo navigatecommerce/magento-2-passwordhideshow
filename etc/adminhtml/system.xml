@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="navigate" translate="Navigate Extensions" sortOrder="100" class="navigate-extensions-tab">
+            <label>Navigate Extensions</label>
+        </tab>
+        <section id="passwordhideshow" showInDefault="1" showInWebsite="1" showInStore="1" type="text" translate="Password Show Hide" sortOrder="350">
+            <label>Password Show Hide</label>
+            <class>separator-top</class>
+            <tab>navigate</tab>
+            <resource>Navigate_PasswordHideShow::config_passwordhideshow</resource>
+            <group id="general" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="20">
+                <label>General Settings</label>
+                <field id="enable" translate="Enable Module" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_login_page" translate="Enable for Login Page" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Login Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="enable_registration_page" translate="Enable for Registration Page" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Registration Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="enable_edit_account" translate="Enable for Edit Account Information Page" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable for Edit Account Information Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="show_pasword" translate="Show Passwod Icon" type="image" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Passwod Icon</label>
+                    <comment>Allowed file types: jpg, jpeg, png, svg.</comment>
+                    <backend_model>Navigate\PasswordHideShow\Model\Config\Backend\Show</backend_model>
+                    <base_url type="media" scope_info="1">Navigate/Icon</base_url>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="hide_pasword" translate="Hide Passwod Icon" type="image" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide Passwod Icon</label>
+                    <comment>Allowed file types: jpg, jpeg, png, svg.</comment>
+                    <backend_model>Navigate\PasswordHideShow\Model\Config\Backend\Hide</backend_model>
+                    <base_url type="media" scope_info="1">Navigate/Icon</base_url>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

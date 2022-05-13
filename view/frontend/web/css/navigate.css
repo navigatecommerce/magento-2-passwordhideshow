@@ -1,6 +1,6 @@
-.field.password .control, .field.confirmation .control{position:relative;}
-.toggle-password img, .toggle-password-confirmation img{ height:24px;}
-.toggle-password, .toggle-password-confirmation {
+.field.current .control, .field.password .control, .field.confirmation .control{position:relative;}
+.toggle-current-password img, .toggle-password img, .toggle-password-confirmation img{ height:24px;}
+.toggle-current-password, .toggle-password, .toggle-password-confirmation {
     position: absolute;
     height: 32px;
     right: 0;

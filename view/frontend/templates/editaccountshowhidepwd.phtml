@@ -1,5 +1,5 @@
-<?php $isEnableRegister = $block->IsEnableForRegistration();
-if ($isEnableRegister) {
+<?php $isEditAccount = $block->IsEnableForEditAccount();
+if ($isEditAccount) {
     $showPasswordImg = '';
     $hidePasswordImg = '';
     if ($block->getShowPasswordImage()) {
@@ -15,8 +15,25 @@ if ($isEnableRegister) {
     ?>
 <script type="text/javascript">
 require(['jquery'], function($){
+    jQuery("#current-password").before('<span toggle="#current-password" class="toggle-current-password"><img src="<?= $showPasswordImg ?>" class="eye-open-current" /><img src="<?= $hidePasswordImg ?>" class="eye-close-current" style="display: none;"/></span>');
+
     jQuery("#password").before('<span toggle="#password" class="toggle-password"><img src="<?= $showPasswordImg ?>" class="eye-open" /><img src="<?= $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>');
+
     jQuery("#password-confirmation").before('<span toggle="#password-confirmation" class="toggle-password-confirmation"><img src="<?= $showPasswordImg ?>" class="eye-open-confirmation" /><img src="<?= $hidePasswordImg ?>" class="eye-close-confirmation" style="display: none;"/></span>');
+
+    jQuery("body").on('click', '.toggle-current-password', function() {
+        var input = jQuery("#current-password");
+        if (input.attr("type") === "password") {
+            input.attr("type", "text");
+            jQuery(".eye-close-current").show();
+            jQuery(".eye-open-current").hide();
+        } else {
+            jQuery(".eye-close-current").hide();
+            jQuery(".eye-open-current").show();
+            input.attr("type", "password");
+        }
+    });
+
     jQuery("body").on('click', '.toggle-password', function() {
         var input = jQuery("#password");
         if (input.attr("type") === "password") {

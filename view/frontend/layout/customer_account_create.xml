@@ -11,7 +11,7 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="create-show-hide-password" template="Navigate_PasswordHideShow::registershowhidepwd.phtml"/>
+            <block class="Navigate\PasswordHideShow\Block\Main" name="register-show-hide-password" template="Navigate_PasswordHideShow::registershowhidepwd.phtml"/>
         </referenceContainer>
     </body>
 </page>

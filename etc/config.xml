@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2022 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <passwordhideshow>
+            <general>
+                <enable>1</enable>
+                <enable_login_page>1</enable_login_page>
+                <enable_registration_page>1</enable_registration_page>
+                <enable_edit_account>1</enable_edit_account>
+            </general>
+        </passwordhideshow>
+    </default>
+</config>

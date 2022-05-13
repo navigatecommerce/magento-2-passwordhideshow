@@ -1,6 +1,21 @@
+<?php $isEnableLogin = $block->IsEnableForLogin();
+if ($isEnableLogin) {
+    $showPasswordImg = '';
+    $hidePasswordImg = '';
+    if ($block->getShowPasswordImage()) {
+        $showPasswordImg = $block->getShowPasswordImage();
+    } else {
+        $showPasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye.png");
+    }
+    if ($block->getHidePasswordImage()) {
+        $hidePasswordImg = $block->getHidePasswordImage();
+    } else {
+        $hidePasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png");
+    }
+    ?>
 <script type="text/javascript">
-require(['jquery', 'jquery/ui'], function($){
-    jQuery("#pass").before('<span toggle="#pass" class="toggle-password"><img src="<?= $this->getViewFileUrl("Navigate_PasswordHideShow::images/eye.png"); ?>" class="eye-open" /><img src="<?= $this->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png"); ?>" class="eye-close" style="display: none;"/></span>');
+require(['jquery'], function($){
+    jQuery("#pass").before('<span toggle="#pass" class="toggle-password"><img src="<?= $showPasswordImg ?>" class="eye-open" /><img src="<?= $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>');
     jQuery("body").on('click', '.toggle-password', function() {
         var input = jQuery("#pass");
         if (input.attr("type") === "password") {
@@ -15,3 +30,4 @@ require(['jquery', 'jquery/ui'], function($){
     });
 });
 </script>
+<?php } ?>

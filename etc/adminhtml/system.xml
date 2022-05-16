@@ -36,8 +36,8 @@
                         <field id="enable">1</field>
                     </depends>
                 </field>
-                <field id="show_pasword" translate="Show Passwod Icon" type="image" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Show Passwod Icon</label>
+                <field id="show_pasword" translate="Show Password Icon" type="image" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Password Icon</label>
                     <comment>Allowed file types: jpg, jpeg, png, svg.</comment>
                     <backend_model>Navigate\PasswordHideShow\Model\Config\Backend\Show</backend_model>
                     <base_url type="media" scope_info="1">Navigate/Icon</base_url>
@@ -45,8 +45,8 @@
                         <field id="enable">1</field>
                     </depends>
                 </field>
-                <field id="hide_pasword" translate="Hide Passwod Icon" type="image" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Hide Passwod Icon</label>
+                <field id="hide_pasword" translate="Hide Password Icon" type="image" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hide Password Icon</label>
                     <comment>Allowed file types: jpg, jpeg, png, svg.</comment>
                     <backend_model>Navigate\PasswordHideShow\Model\Config\Backend\Hide</backend_model>
                     <base_url type="media" scope_info="1">Navigate/Icon</base_url>

@@ -3,14 +3,14 @@ if ($isEnableLogin) {
     $showPasswordImg = '';
     $hidePasswordImg = '';
     if ($block->getShowPasswordImage()) {
-        $showPasswordImg = $block->getShowPasswordImage();
+        $hidePasswordImg = $block->getShowPasswordImage();
     } else {
-        $showPasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye.png");
+        $hidePasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye.png");
     }
     if ($block->getHidePasswordImage()) {
-        $hidePasswordImg = $block->getHidePasswordImage();
+        $showPasswordImg = $block->getHidePasswordImage();
     } else {
-        $hidePasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png");
+        $showPasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png");
     }
     ?>
 <script type="text/javascript">

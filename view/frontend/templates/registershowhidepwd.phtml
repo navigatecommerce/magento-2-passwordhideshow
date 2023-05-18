@@ -1,4 +1,14 @@
-<?php $isEnableRegister = $block->IsEnableForRegistration();
+<?php
+/*
+ * Navigate Commerce
+ *
+ * @author        Navigate Commerce
+ * @package       Navigate_PasswordHideShow
+ * @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ * @license       https://www.navigatecommerce.com/end-user-license-agreement
+ */
+
+$isEnableRegister = $block->isEnableForRegistration();
 if ($isEnableRegister) {
     $showPasswordImg = '';
     $hidePasswordImg = '';
@@ -13,10 +23,10 @@ if ($isEnableRegister) {
         $showPasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png");
     }
     ?>
-<script type="text/javascript">
+<script>
 require(['jquery'], function($){
-    jQuery("#password").before('<span toggle="#password" class="toggle-password"><img src="<?= $showPasswordImg ?>" class="eye-open" /><img src="<?= $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>');
-    jQuery("#password-confirmation").before('<span toggle="#password-confirmation" class="toggle-password-confirmation"><img src="<?= $showPasswordImg ?>" class="eye-open-confirmation" /><img src="<?= $hidePasswordImg ?>" class="eye-close-confirmation" style="display: none;"/></span>');
+    jQuery("#password").before('<span toggle="#password" class="toggle-password"><img src="<?= /* @noEscape */ $showPasswordImg ?>" class="eye-open" /><img src="<?= /* @noEscape */ $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>'); <?php // phpcs:ignore ?>
+    jQuery("#password-confirmation").before('<span toggle="#password-confirmation" class="toggle-password-confirmation"><img src="<?= /* @noEscape */ $showPasswordImg ?>" class="eye-open-confirmation" /><img src="<?= /* @noEscape */ $hidePasswordImg ?>" class="eye-close-confirmation" style="display: none;"/></span>'); <?php // phpcs:ignore ?>
     jQuery("body").on('click', '.toggle-password', function() {
         var input = jQuery("#password");
         if (input.attr("type") === "password") {

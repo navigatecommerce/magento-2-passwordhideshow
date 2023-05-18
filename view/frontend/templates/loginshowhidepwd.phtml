@@ -1,4 +1,14 @@
-<?php $isEnableLogin = $block->IsEnableForLogin();
+<?php
+/*
+ * Navigate Commerce
+ *
+ * @author        Navigate Commerce
+ * @package       Navigate_PasswordHideShow
+ * @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ * @license       https://www.navigatecommerce.com/end-user-license-agreement
+ */
+
+$isEnableLogin = $block->isEnableForLogin();
 if ($isEnableLogin) {
     $showPasswordImg = '';
     $hidePasswordImg = '';
@@ -13,9 +23,9 @@ if ($isEnableLogin) {
         $showPasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png");
     }
     ?>
-<script type="text/javascript">
+<script>
 require(['jquery'], function($){
-    jQuery("#pass").before('<span toggle="#pass" class="toggle-password"><img src="<?= $showPasswordImg ?>" class="eye-open" /><img src="<?= $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>');
+    jQuery("#pass").before('<span toggle="#pass" class="toggle-password"><img src="<?= /* @noEscape */ $showPasswordImg ?>" class="eye-open" /><img src="<?= /* @noEscape */ $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>'); <?php // phpcs:ignore ?>
     jQuery("body").on('click', '.toggle-password', function() {
         var input = jQuery("#pass");
         if (input.attr("type") === "password") {

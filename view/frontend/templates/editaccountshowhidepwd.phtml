@@ -1,4 +1,14 @@
-<?php $isEditAccount = $block->IsEnableForEditAccount();
+<?php
+/*
+ * Navigate Commerce
+ *
+ * @author        Navigate Commerce
+ * @package       Navigate_PasswordHideShow
+ * @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ * @license       https://www.navigatecommerce.com/end-user-license-agreement
+ */
+
+$isEditAccount = $block->isEnableForEditAccount();
 if ($isEditAccount) {
     $showPasswordImg = '';
     $hidePasswordImg = '';
@@ -13,13 +23,13 @@ if ($isEditAccount) {
         $showPasswordImg = $block->getViewFileUrl("Navigate_PasswordHideShow::images/eye-slash.png");
     }
     ?>
-<script type="text/javascript">
+<script>
 require(['jquery'], function($){
-    jQuery("#current-password").before('<span toggle="#current-password" class="toggle-current-password"><img src="<?= $showPasswordImg ?>" class="eye-open-current" /><img src="<?= $hidePasswordImg ?>" class="eye-close-current" style="display: none;"/></span>');
+    jQuery("#current-password").before('<span toggle="#current-password" class="toggle-current-password"><img src="<?= /* @noEscape */ $showPasswordImg ?>" class="eye-open-current" /><img src="<?= /* @noEscape */ $hidePasswordImg ?>" class="eye-close-current" style="display: none;"/></span>'); <?php // phpcs:ignore ?>
 
-    jQuery("#password").before('<span toggle="#password" class="toggle-password"><img src="<?= $showPasswordImg ?>" class="eye-open" /><img src="<?= $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>');
+    jQuery("#password").before('<span toggle="#password" class="toggle-password"><img src="<?= /* @noEscape */ $showPasswordImg ?>" class="eye-open" /><img src="<?= /* @noEscape */ $hidePasswordImg ?>" class="eye-close" style="display: none;"/></span>'); <?php // phpcs:ignore ?>
 
-    jQuery("#password-confirmation").before('<span toggle="#password-confirmation" class="toggle-password-confirmation"><img src="<?= $showPasswordImg ?>" class="eye-open-confirmation" /><img src="<?= $hidePasswordImg ?>" class="eye-close-confirmation" style="display: none;"/></span>');
+    jQuery("#password-confirmation").before('<span toggle="#password-confirmation" class="toggle-password-confirmation"><img src="<?= /* @noEscape */ $showPasswordImg ?>" class="eye-open-confirmation" /><img src="<?= /* @noEscape */ $hidePasswordImg ?>" class="eye-close-confirmation" style="display: none;"/></span>'); <?php // phpcs:ignore ?>
 
     jQuery("body").on('click', '.toggle-current-password', function() {
         var input = jQuery("#current-password");

@@ -1,25 +1,13 @@
 <?xml version="1.0"?>
 <!--
-/**
- * Navigate Commerce
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Navigate.com license that is
- * available through the world-wide-web at this URL:
- * https://www.navigatecommerce.com/LICENSE.txt
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade this extension to newer
- * version in the future.
- *
- * @category    Navigate
- * @package     Navigate_PasswordHideShow
- * @copyright   Copyright (c) Navigate (https://www.navigatecommerce.com/)
- * @license     https://www.navigatecommerce.com/LICENSE.txt
- */
- -->
+ Navigate Commerce
+
+ @author        Navigate Commerce
+ @package       Navigate_PasswordHideShow
+ @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ @license       https://www.navigatecommerce.com/end-user-license-agreement
+-->
+
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Navigate_PasswordHideShow::main" title="Password Show Hide" translate="title" module="Navigate_PasswordHideShow" parent="Navigate_Core::core" sortOrder="350" resource="Navigate_PasswordHideShow::main"/>

@@ -1,4 +1,12 @@
 <?php
+/*
+ * Navigate Commerce
+ *
+ * @author        Navigate Commerce
+ * @package       Navigate_PasswordHideShow
+ * @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ * @license       https://www.navigatecommerce.com/end-user-license-agreement
+ */
 
 namespace Navigate\PasswordHideShow\Model\Config\Backend;
 
@@ -8,7 +16,7 @@ class Show extends \Magento\Config\Model\Config\Backend\Image
      * The tail part of directory path for uploading
      *
      */
-    const UPLOAD_DIR = 'Navigate/Icon'; // Folder save image
+    protected const UPLOAD_DIR = 'Navigate/Icon'; // Folder save image
 
     /**
      * Return path to directory for upload file

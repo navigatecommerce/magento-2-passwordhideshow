@@ -1,3 +1,12 @@
+/*
+ * Navigate Commerce
+ *
+ * @author        Navigate Commerce
+ * @package       Navigate_PasswordHideShow
+ * @copyright     Copyright (c) Navigate (https://www.navigatecommerce.com/)
+ * @license       https://www.navigatecommerce.com/end-user-license-agreement
+ */
+
 .field.current .control, .field.password .control, .field.confirmation .control{position:relative;}
 .toggle-current-password img, .toggle-password img, .toggle-password-confirmation img{ height:24px;}
 .toggle-current-password, .toggle-password, .toggle-password-confirmation {

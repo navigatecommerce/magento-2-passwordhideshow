@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Navigate Commerce
  *
  * @author        Navigate Commerce
@@ -37,7 +37,7 @@ class Main extends \Magento\Framework\View\Element\Template
     protected $scopeConfig;
 
     /**
-     * Construct method
+     * Main Construct method
      *
      * @param Template\Context $context
      * @param StoreManagerInterface $modelStoreManagerInterface
@@ -80,7 +80,7 @@ class Main extends \Magento\Framework\View\Element\Template
     }
 
     /**
-     * Function to check enable for login or not
+     * Function to check enable for login page
      *
      * @return boolean
      */
@@ -131,7 +131,7 @@ class Main extends \Magento\Framework\View\Element\Template
     }
 
     /**
-     * Retrive password iamge
+     * Retrive show password image
      *
      * @return boolean|string
      */
